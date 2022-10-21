@@ -6,7 +6,61 @@ using System.Threading.Tasks;
 
 namespace OOD_Uppgift.employee
 {
-    internal class Employee
+    public static interface IEquipment
     {
+        string GetName();
+        void DoWork();
+    }
+
+    public class Attire : IEquipment
+    {
+        public const string name;
+        public const string workDesc;
+
+        public Attire(string name, string workDesc)
+        {
+            this.name = name;
+            this.workDesc = workDesc;
+        }
+
+        public string GetName()
+        {
+            return this.name;
+        }
+
+        public void DoWork()
+        {
+            Console.WriteLine(this.workDesc);
+        }
+    }
+
+    public class Tool : IEquipment
+    {
+        public const string name;
+        public const string workDesc;
+
+        public Tool(string name, string workDesc)
+        {
+            this.name = name;
+            this.workDesc = workDesc;
+        }
+
+        public string GetName()
+        {
+            return this.name;
+        }
+
+        public void DoWork()
+        {
+            Console.WriteLine(this.workDesc);
+        }
+    }
+
+    
+
+    internal class Employee 
+    {
+        
+        
     }
 }
