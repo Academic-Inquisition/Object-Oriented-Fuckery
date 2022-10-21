@@ -12,6 +12,8 @@ namespace OOD_Uppgift.employee
         void DoWork();
     }
 
+
+
     public class Attire : IEquipment
     {
         public const string name;
@@ -60,7 +62,18 @@ namespace OOD_Uppgift.employee
 
     internal class Employee 
     {
-        
+        public const Dictionary<IEquipment, int> equipments;
+
+        public Employee()
+        {
+            this.equipments = new Dictionary<>();
+
+            foreach(IEquipment equipment in Equipments)
+            {
+
+            }
+
+        }
         
     }
 }
