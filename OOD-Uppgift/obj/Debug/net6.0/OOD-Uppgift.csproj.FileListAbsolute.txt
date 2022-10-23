@@ -1,0 +1,15 @@
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\obj\Debug\net6.0\OOD-Uppgift.csproj.AssemblyReference.cache
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\obj\Debug\net6.0\OOD-Uppgift.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\obj\Debug\net6.0\OOD-Uppgift.AssemblyInfoInputs.cache
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\obj\Debug\net6.0\OOD-Uppgift.AssemblyInfo.cs
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\obj\Debug\net6.0\OOD-Uppgift.csproj.CoreCompileInputs.cache
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\bin\Debug\net6.0\OOD-Uppgift.exe
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\bin\Debug\net6.0\OOD-Uppgift.deps.json
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\bin\Debug\net6.0\OOD-Uppgift.runtimeconfig.json
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\bin\Debug\net6.0\OOD-Uppgift.dll
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\bin\Debug\net6.0\OOD-Uppgift.pdb
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\obj\Debug\net6.0\OOD-Uppgift.dll
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\obj\Debug\net6.0\refint\OOD-Uppgift.dll
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\obj\Debug\net6.0\OOD-Uppgift.pdb
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\obj\Debug\net6.0\OOD-Uppgift.genruntimeconfig.cache
+C:\Users\ljung\Documents\GIK2F7_Objektorienterad_Design_Och_Problemlösning\Projekt\Object-Oriented-Fuckery\OOD-Uppgift\obj\Debug\net6.0\ref\OOD-Uppgift.dll

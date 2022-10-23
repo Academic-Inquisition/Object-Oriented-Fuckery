@@ -27,7 +27,7 @@ namespace OOD_Uppgift.register
             throw new NotImplementedException();
         }
 
-        public override bool Remove(Employee employee)
+        public bool Remove(Employee employee)
         {
             throw new NotImplementedException();
         }
@@ -37,7 +37,7 @@ namespace OOD_Uppgift.register
             throw new NotImplementedException();
         }
 
-        public override bool RemoveAll()
+        public override void RemoveAll()
         {
             throw new NotImplementedException();
         }

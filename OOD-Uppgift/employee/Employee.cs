@@ -6,74 +6,21 @@ using System.Threading.Tasks;
 
 namespace OOD_Uppgift.employee
 {
-    public static interface IEquipment
+    internal class Employee
     {
-        string GetName();
-        void DoWork();
-    }
+        public string name;
+        public WorkerType workertype;
+        public Guid ID;
+        public List<IEquipment> equipments = new List<IEquipment>();
 
-
-
-    public class Attire : IEquipment
-    {
-        public const string name;
-        public const string workDesc;
-
-        public Attire(string name, string workDesc)
-        {
-            this.name = name;
-            this.workDesc = workDesc;
+        public Employee(string employeeName, WorkerType wt) {
+            name = employeeName;
+            workertype = wt;
+            Guid ID = Guid.NewGuid();
         }
-
-        public string GetName()
+        public void addEquipment(IEquipment equipment)
         {
-            return this.name;
+            equipments.Add(equipment);
         }
-
-        public void DoWork()
-        {
-            Console.WriteLine(this.workDesc);
-        }
-    }
-
-    public class Tool : IEquipment
-    {
-        public const string name;
-        public const string workDesc;
-
-        public Tool(string name, string workDesc)
-        {
-            this.name = name;
-            this.workDesc = workDesc;
-        }
-
-        public string GetName()
-        {
-            return this.name;
-        }
-
-        public void DoWork()
-        {
-            Console.WriteLine(this.workDesc);
-        }
-    }
-
-    
-
-    internal class Employee 
-    {
-        public const Dictionary<IEquipment, int> equipments;
-
-        public Employee()
-        {
-            this.equipments = new Dictionary<>();
-
-            foreach(IEquipment equipment in Equipments)
-            {
-
-            }
-
-        }
-        
     }
 }
