@@ -6,74 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOD_Uppgift.employee
 {
-    public interface IEquipment
-    {
-        string GetName();
-        void DoWork();
-    }
-
-
-
-    public class Attire : IEquipment
-    {
-        public  string name;
-        public  string workDesc;
-
-        public Attire(string name, string workDesc)
-        {
-            this.name = name;
-            this.workDesc = workDesc;
-        }
-
-        public string GetName()
-        {
-            return this.name;
-        }
-
-        public void DoWork()
-        {
-            Console.WriteLine(this.workDesc);
-        }
-    }
-
-    public class Tool : IEquipment
-    {
-        public string name;
-        public string workDesc;
-
-        public Tool(string name, string workDesc)
-        {
-            this.name = name;
-            this.workDesc = workDesc;
-        }
-
-        public string GetName()
-        {
-            return this.name;
-        }
-
-        public void DoWork()
-        {
-            Console.WriteLine(this.workDesc);
-        }
-    }
-
-    
-
     internal class Employee 
     {
-        public Dictionary<IEquipment, int> equipments;
+        public string Name;
 
-        public Employee()
+        public Employee(string name)
         {
-            this.equipments = new Dictionary<IEquipment, int>();
-
-            foreach(KeyValuePair<IEquipment, int> equipment in equipments)
-            {
-
-            }
-
-
+            Name = name;
         }
         
     }

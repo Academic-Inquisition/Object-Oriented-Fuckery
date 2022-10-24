@@ -23,7 +23,7 @@ namespace OOD_Uppgift.register
         public override bool Add(string socialId, Employee employee)
         {
             //Does the socialId already exist?
-            if (this.Get(socialId)==null)
+            if (GetKeyValuePair(socialId)!=null)
             {
                 Console.WriteLine($"Error: Cannot add new Employee with Social ID: {socialId}, because said employee already exists!");
                 return false;
@@ -32,41 +32,28 @@ namespace OOD_Uppgift.register
             return true;
         }
 
+        
         public override Employee? Get(string socialId)
         {
-            //prepare linear search for the emplyee
-            LinkedListNode<KeyValuePair<string,Employee>>? node = _linkedRegistry.First;
-            while(node != null)
+            var kvp = GetKeyValuePair(socialId);
+            if (kvp!=null)
             {
-                //Check if the current node has the socialId we are looking for
-                if (node.Value.Key == socialId)
-                {
-                    // if yes then return the employee
-                    return node.Value.Value;
-                }
-                node = node.Next;
+                return  kvp.Value.Value;
             }
-            //No node was found with searched for socialId
             Console.WriteLine($"Error: Cannot get Employee with Social ID: {socialId}, because said employee doesn't exist!");
             return null;
         }
 
         public override bool Remove(string socialId)
         {
-            //prepare linear search for the emplyee
-            LinkedListNode<KeyValuePair<string, Employee>>? node = _linkedRegistry.First;
-            while (node != null)
+            var kvp = GetKeyValuePair(socialId);
+            if (kvp != null)
             {
-                //Check if the current node has the socialId we are looking for
-                if (node.Value.Key == socialId)
-                { 
-                    // if yes then remove the emplyee
-                    _linkedRegistry.Remove(node.Value);
-                    return true;
-                }
-                node = node.Next;
+                return _linkedRegistry.Remove(kvp.Value);
             }
             return false;
+            
+
         }
 
         public override void RemoveAll()
@@ -76,10 +63,10 @@ namespace OOD_Uppgift.register
 
         public override Employee? Update(string socialId, Employee employee)
         {
-            if (this.Remove(socialId)==true)
+
+            if (this.Remove(socialId))
             {
-                this.Add(socialId, employee);
-                return employee;
+                return this.Add(socialId, employee) ? employee : null;
             }
             Console.WriteLine($"Error: Failed to Update Employee with Social ID: {socialId}");
             return null;
@@ -87,10 +74,12 @@ namespace OOD_Uppgift.register
 
         public override Employee? Update(string socialId, Func<Employee, Employee> updateFunction)
         {
-            Employee? employee = this.Get(socialId);
-            if(employee!=null)
-            {
-                if(this.Remove(socialId)==true)
+
+            var kvp = GetKeyValuePair(socialId);
+            if (kvp != null)
+            { 
+                Employee employee = kvp.Value.Value;
+                if (this.Remove(socialId)==true)
                 {
                     updateFunction(employee);
                     return this.Add(socialId, employee) ? employee : null;
@@ -99,6 +88,27 @@ namespace OOD_Uppgift.register
             }
             return null;
         }
+
+        //---------------------------------------
+
+        //Helper Function
+        private KeyValuePair<string, Employee>? GetKeyValuePair(string socialId)
+        {
+            LinkedListNode<KeyValuePair<string, Employee>>? node = _linkedRegistry.First;
+            while (node != null)
+            {
+                //Check if the current node has the socialId we are looking for
+                if (node.Value.Key == socialId)
+                {
+                    // if yes then return the employee
+                    return node.Value;
+                }
+                node = node.Next;
+            }
+            return null;
+        }
+
+        //----------------------------------------
 
         public static BaseRegistry GetRegistry()
         {
