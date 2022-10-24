@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\ModProjects\\Object-Oriented-Fuckery\\OOD-Uppgift\\OOD-Uppgift.csproj": {}
+    "C:\\Users\\Niss47\\Documents\\Dalarnas Universitet\\GIK2F7 - HT22 Objektorienterad design och problemlösning (H38K7)\\Object-Oriented-Fuckery\\OOD-Uppgift\\OOD-Uppgift.csproj": {}
   },
   "projects": {
-    "F:\\ModProjects\\Object-Oriented-Fuckery\\OOD-Uppgift\\OOD-Uppgift.csproj": {
+    "C:\\Users\\Niss47\\Documents\\Dalarnas Universitet\\GIK2F7 - HT22 Objektorienterad design och problemlösning (H38K7)\\Object-Oriented-Fuckery\\OOD-Uppgift\\OOD-Uppgift.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ModProjects\\Object-Oriented-Fuckery\\OOD-Uppgift\\OOD-Uppgift.csproj",
+        "projectUniqueName": "C:\\Users\\Niss47\\Documents\\Dalarnas Universitet\\GIK2F7 - HT22 Objektorienterad design och problemlösning (H38K7)\\Object-Oriented-Fuckery\\OOD-Uppgift\\OOD-Uppgift.csproj",
         "projectName": "OOD-Uppgift",
-        "projectPath": "F:\\ModProjects\\Object-Oriented-Fuckery\\OOD-Uppgift\\OOD-Uppgift.csproj",
-        "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
-        "outputPath": "F:\\ModProjects\\Object-Oriented-Fuckery\\OOD-Uppgift\\obj\\",
+        "projectPath": "C:\\Users\\Niss47\\Documents\\Dalarnas Universitet\\GIK2F7 - HT22 Objektorienterad design och problemlösning (H38K7)\\Object-Oriented-Fuckery\\OOD-Uppgift\\OOD-Uppgift.csproj",
+        "packagesPath": "C:\\Users\\Niss47\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Niss47\\Documents\\Dalarnas Universitet\\GIK2F7 - HT22 Objektorienterad design och problemlösning (H38K7)\\Object-Oriented-Fuckery\\OOD-Uppgift\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Niss47\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

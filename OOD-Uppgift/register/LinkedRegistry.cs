@@ -27,17 +27,17 @@ namespace OOD_Uppgift.register
             throw new NotImplementedException();
         }
 
-        public override bool Remove(Employee employee)
-        {
-            throw new NotImplementedException();
-        }
+        //public override bool Remove(Employee employee)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public override bool Remove(string socialId)
         {
             throw new NotImplementedException();
         }
 
-        public override bool RemoveAll()
+        public override void RemoveAll()
         {
             throw new NotImplementedException();
         }
