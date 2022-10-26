@@ -34,9 +34,12 @@ namespace OOD_Uppgift
                         RemoveMenu.RunProgram();
                         break;
                     case 4:
-                        RegistryMenu.RunProgram();
+                        GetMenu.RunProgram();
                         break;
                     case 5:
+                        RegistryMenu.RunProgram();
+                        break;
+                    case 6:
                         Console.WriteLine("Press any key to close this window");
                         Console.ReadKey();
                         Environment.Exit(0);

@@ -6,7 +6,7 @@ namespace OOD_Uppgift.menu
 {
     public class MainMenu
     {
-        private static readonly Predicate<int> Invalidator = i => i is < 1 or > 5;
+        private static readonly Predicate<int> Invalidator = i => i is < 1 or > 6;
 
 
         public static void RunProgram()
@@ -37,8 +37,9 @@ namespace OOD_Uppgift.menu
             Console.WriteLine("# [1] - Add an employee                #");
             Console.WriteLine("# [2] - Update an employee             #");
             Console.WriteLine("# [3] - Remove an employee             #");
-            Console.WriteLine("# [4] - Change data structure          #");
-            Console.WriteLine("# [5] - Exit                           #");
+            Console.WriteLine("# [4] - Get an employee                #");
+            Console.WriteLine("# [5] - Change data structure          #");
+            Console.WriteLine("# [6] - Exit                           #");
             Console.WriteLine("#--------------------------------------#");
             
             Console.Write("Option: ");
@@ -46,7 +47,7 @@ namespace OOD_Uppgift.menu
 
             while (input == null || Invalidator(input.Value))
             {
-                Console.WriteLine("Invalid Input, Number should be between 1 and 5");
+                Console.WriteLine("Invalid Input, Number should be between 1 and 6");
                 Console.Write("Option: ");
                 input = Util.ReadLine<int>();
             }
