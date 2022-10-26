@@ -12,16 +12,16 @@ namespace OOD_Uppgift.menu
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   Add Employee                                  #");
             Console.WriteLine("#-------------------------------------------------#");
-            Console.WriteLine("#   Skriv in ditt personummer                     #");
-            Console.Write("personnummer: ");
+            Console.WriteLine("#   Type your SocialID                            #");
+            Console.Write("SocialID: ");
             string socialId = Util.ReadLine<string?>();
-            Console.WriteLine("#   Skriv in ditt namn                     #");
-            Console.Write("namn: ");
+            Console.WriteLine("#   Type in your Name                             #");
+            Console.Write("Name: ");
             string name = Util.ReadLine<string?>();
 
             var workertypes = WorkerTypeHandler.getTypes();
 
-            Console.WriteLine("#   Välj vilken workertype du är                #");
+            Console.WriteLine("#   Choose your workertype                        #");
             foreach (var workertype in workertypes)
             {
                 Console.WriteLine($"[{workertype.Key}] {workertype.Value}");
@@ -42,7 +42,7 @@ namespace OOD_Uppgift.menu
             }
 
             Program.registry.Add(socialId,new Employee(name,(WorkerType)emp_workertype_input));
-            Program.ActiveProgram = -1;
+            Program.ResetProgram();
         }
     }
 }

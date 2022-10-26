@@ -9,6 +9,7 @@ namespace OOD_Uppgift
         public static int ActiveProgram = -1;
 
         internal static BaseRegistry registry = new DictionaryRegistry();
+
         public static string? dataStructure = "Dictionary";
 
         public static void Main(string[] args)

@@ -10,8 +10,8 @@ namespace OOD_Uppgift.menu
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   Remove Employee                               #");
             Console.WriteLine("#-------------------------------------------------#");
-            Console.WriteLine("#   Skriv in personnummret                     #");
-            Console.Write("personnummer: ");
+            Console.WriteLine("#   Type your SocialID                            #");
+            Console.Write("SocialID: ");
             string socialId = Util.ReadLine<string?>();
 
             if (Program.registry.Remove(socialId))
@@ -24,7 +24,7 @@ namespace OOD_Uppgift.menu
                 Console.WriteLine($"Employee {socialId} Could not be found.");
             }
 
-            Program.ActiveProgram = -1;
+            Program.ResetProgram();
         }
     }
 }

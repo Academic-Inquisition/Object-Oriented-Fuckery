@@ -11,8 +11,8 @@ namespace OOD_Uppgift.menu
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   Get Employee                                  #");
             Console.WriteLine("#-------------------------------------------------#");
-            Console.WriteLine("#   Skriv in personnummret                     #");
-            Console.Write("personnummer: ");
+            Console.WriteLine("#   Type your SocialID                            #");
+            Console.Write("SocialID: ");
             string socialId = Util.ReadLine<string?>();
             Employee? employee = Program.registry.Get(socialId);
             if(employee == null)
@@ -22,12 +22,12 @@ namespace OOD_Uppgift.menu
             else
             {
                 var workertypes = WorkerTypeHandler.getTypes();
-                Console.WriteLine($"Personnummer: {socialId}");
-                Console.WriteLine($"namn: {employee.name}");
+                Console.WriteLine($"SocialID: {socialId}");
+                Console.WriteLine($"Name: {employee.name}");
                 Console.WriteLine($"WokerType: {workertypes[(int)employee.workertype]}");
-                Console.WriteLine($"GUID: {employee.ID}");
+                Console.WriteLine($"GUID: {employee.ID.ToString()}");
             }
-            Program.ActiveProgram = -1;
+            Program.ResetProgram();
         }
     }
 }

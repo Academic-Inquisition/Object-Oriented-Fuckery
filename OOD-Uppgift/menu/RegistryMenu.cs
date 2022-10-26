@@ -32,6 +32,7 @@ namespace OOD_Uppgift.menu
             Console.WriteLine("#   [1] Dictionary                                #");
             Console.WriteLine("#   [2] Linked List                               #");
             Console.WriteLine("#   [3] Return                                    #");
+            Console.WriteLine("#-------------------------------------------------#");
 
             Console.Write("Option: ");
             var input = Util.ReadLine<int?>();
@@ -64,7 +65,7 @@ namespace OOD_Uppgift.menu
                     break;
             }
 
-            Program.ActiveProgram = -1;
+            Program.ResetProgram();
         }
 
         //private void MigrateNOTDatabase(string input)
