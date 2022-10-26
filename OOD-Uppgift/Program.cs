@@ -1,10 +1,45 @@
-﻿namespace OOD_Uppgift
+using System;
+using OOD_Uppgift.menu;
+
+namespace OOD_Uppgift
 {
-    internal class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static int ActiveProgram = -1;
+
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            while (!Environment.HasShutdownStarted)
+            {
+                while (ActiveProgram == -1)
+                {
+                    MainMenu.RunProgram();
+                    break;
+                }
+
+                Console.Clear();
+                switch (ActiveProgram)
+                {
+                    case 1:
+                        AddMenu.RunProgram();
+                        break;
+                    case 2:
+                        UpdateMenu.RunProgram();
+                        break;
+                    case 3:
+                        RemoveMenu.RunProgram();
+                    case 4:
+                        Console.WriteLine("Press any key to close this window");
+                        Console.ReadKey();
+                        Environment.Exit(0);
+                        break;
+                }
+            }
+        }
+
+        public static void ResetProgram()
+        {
+            ActiveProgram = -1;
         }
     }
 }
