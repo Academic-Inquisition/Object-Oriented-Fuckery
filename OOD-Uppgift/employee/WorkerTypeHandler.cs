@@ -8,10 +8,10 @@ namespace OOD_Uppgift.employee
         Bumblebee = 2,
         Giraff = 3
     }
-    public class WorkerTypeHandler
+    public static class WorkerTypeHandler
 
     {
-        public Dictionary<int, string> getTypes()
+        public static Dictionary<int, string> getTypes()
         {
             Dictionary<int, string> result = new Dictionary<int, string>();
             foreach (WorkerType wt in Enum.GetValues(typeof(WorkerType)))

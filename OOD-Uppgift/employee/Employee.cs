@@ -11,7 +11,7 @@ namespace OOD_Uppgift.employee
         public string name;
         public WorkerType workertype;
         public Guid ID;
-        public List<IEquipment> equipments = new List<IEquipment>();
+        public Dictionary<IEquipment,int> equipments = new ();
 
         public Employee(string employeeName, WorkerType wt) {
             name = employeeName;
@@ -20,7 +20,14 @@ namespace OOD_Uppgift.employee
         }
         public void addEquipment(IEquipment equipment)
         {
-            equipments.Add(equipment);
+            if (equipments.ContainsKey(equipment))
+            {
+                equipments[equipment] = +1;
+            }
+            else
+            {
+                equipments.Add(equipment, 1);
+            }
         }
     }
 }

@@ -1,11 +1,14 @@
 using System;
 using OOD_Uppgift.menu;
+using OOD_Uppgift.register;
 
 namespace OOD_Uppgift
 {
     public static class Program
     {
         public static int ActiveProgram = -1;
+
+        internal static BaseRegistry registry = new DictionaryRegistry();
 
         public static void Main(string[] args)
         {
@@ -30,6 +33,9 @@ namespace OOD_Uppgift
                         RemoveMenu.RunProgram();
                         break;
                     case 4:
+                        RegistryMenu.RunProgram();
+                        break;
+                    case 5:
                         Console.WriteLine("Press any key to close this window");
                         Console.ReadKey();
                         Environment.Exit(0);
