@@ -10,9 +10,6 @@ namespace OOD_Uppgift.menu
         public static void RunProgram()
         {
             Console.WriteLine("#-------------------------------------------------#");
-            Console.WriteLine("#                                                 #");
-            Console.WriteLine("#                                                 #");
-            Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   Add Employee                                  #");
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   Skriv in ditt personummer                     #");
