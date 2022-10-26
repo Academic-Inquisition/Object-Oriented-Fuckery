@@ -7,14 +7,15 @@ namespace OOD_Uppgift.menu
     public class MainMenu
     {
         private static readonly Predicate<int> Invalidator = i => i is < 1 or > 5;
-        public static string? dataStructure, structureString;
+
 
         public static void RunProgram()
         {
             // Lägg till kontroll för vilken data structure som används
             // dataStructure = "Dictionary" || datastructure = "Linked List"
 
-            switch(dataStructure)
+            string structureString;
+            switch (Program.dataStructure)
             {
                 case "Dictionary":
                     structureString = "#              Dictionary              #";
@@ -22,7 +23,7 @@ namespace OOD_Uppgift.menu
                 case "Linked List":
                     structureString = "#             Linked List              #";
                     break;
-                case null:
+                default:
                     structureString = "#     No data structure initialized    #";
                     break;
             }
