@@ -11,10 +11,8 @@ namespace OOD_Uppgift.menu
 
         public static void RunProgram()
         {
-            // Lägg till kontroll för vilken data structure som används
-            // dataStructure = "Dictionary" || datastructure = "Linked List"
-
             string structureString;
+            
             switch (Program.dataStructure)
             {
                 case "Dictionary":
@@ -27,7 +25,7 @@ namespace OOD_Uppgift.menu
                     structureString = "#     No data structure initialized    #";
                     break;
             }
-            
+
             Console.WriteLine("#--------------------------------------#");
             Console.WriteLine("# Register loaded with data structure: #");
             Console.WriteLine(structureString);
