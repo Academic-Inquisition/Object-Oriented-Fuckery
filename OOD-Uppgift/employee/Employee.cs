@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD_Uppgift.employee
 {
-    public static interface IEquipment
+    public interface IEquipment
     {
         string GetName();
         void DoWork();
@@ -16,8 +16,8 @@ namespace OOD_Uppgift.employee
 
     public class Attire : IEquipment
     {
-        public const string name;
-        public const string workDesc;
+        public  string name;
+        public  string workDesc;
 
         public Attire(string name, string workDesc)
         {
@@ -38,8 +38,8 @@ namespace OOD_Uppgift.employee
 
     public class Tool : IEquipment
     {
-        public const string name;
-        public const string workDesc;
+        public  string name;
+        public string workDesc;
 
         public Tool(string name, string workDesc)
         {
@@ -62,13 +62,13 @@ namespace OOD_Uppgift.employee
 
     internal class Employee 
     {
-        public const Dictionary<IEquipment, int> equipments;
+        public Dictionary<IEquipment, int> equipments;
 
         public Employee()
         {
-            this.equipments = new Dictionary<>();
+            this.equipments = new ();
 
-            foreach(IEquipment equipment in Equipments)
+            foreach(var equipment in equipments)
             {
 
             }

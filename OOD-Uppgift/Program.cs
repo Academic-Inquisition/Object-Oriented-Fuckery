@@ -28,6 +28,7 @@ namespace OOD_Uppgift
                         break;
                     case 3:
                         RemoveMenu.RunProgram();
+                        break;
                     case 4:
                         Console.WriteLine("Press any key to close this window");
                         Console.ReadKey();
