@@ -12,6 +12,7 @@ namespace OOD_Uppgift.menu
 
         public static void RunProgram()
         {
+            Console.Clear();
             Console.WriteLine("#--------------------------------------#");
             Console.WriteLine("# Register loaded with data structure: #");
             if(Program.registry.GetType() == typeof(DictionaryRegistry))
