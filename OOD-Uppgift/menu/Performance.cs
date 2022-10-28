@@ -6,7 +6,7 @@ namespace OOD_Uppgift.menu
 {
     public class Performance
     {
-        internal static void AddTest(BaseRegistry? testRegistry)
+        internal static void AddTest(BaseRegistry testRegistry)
         {
             for(int i = 1; i <= 50000; i++)
             {
@@ -19,7 +19,7 @@ namespace OOD_Uppgift.menu
             }
         }
 
-        internal static void UpdateTest(BaseRegistry? testRegistry)
+        internal static void UpdateTest(BaseRegistry testRegistry)
         {
             for(int i = 1; i <= 50000; i++)
             {
@@ -32,7 +32,7 @@ namespace OOD_Uppgift.menu
             }
         }
 
-        internal static void ReadTest(BaseRegistry? testRegistry)
+        internal static void ReadTest(BaseRegistry testRegistry)
         {
             for(int i = 1; i <= 50000; i++)
             {
@@ -45,7 +45,7 @@ namespace OOD_Uppgift.menu
             }
         }
 
-        internal static void RemoveTest(BaseRegistry? testRegistry)
+        internal static void RemoveTest(BaseRegistry testRegistry)
         {
             for(int i = 1; i <= 50000; i++)
             {

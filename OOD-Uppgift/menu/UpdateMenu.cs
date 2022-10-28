@@ -40,7 +40,7 @@ namespace OOD_Uppgift.menu
             {
                 Console.WriteLine("Invalid Input, Number should be between 1 and 4");
                 Console.Write("Option: ");
-                input = Util.ReadLine<int>();
+                input = Util.ReadLine<int?>();
             }
 
             switch(input)

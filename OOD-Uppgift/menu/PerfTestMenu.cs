@@ -45,8 +45,6 @@ namespace OOD_Uppgift.menu
                     Console.Clear();
                     PerfTest(testRegistry);
                     break;
-                default:
-                    break;
             }
             
             Program.ResetProgram();
@@ -90,7 +88,7 @@ namespace OOD_Uppgift.menu
 
                 Console.WriteLine();
 
-                if (input == "Y" || input == "y")
+                if (input.ToUpper() == "Y" || input == "y")
                 {   
                     bothTested = true;
 
