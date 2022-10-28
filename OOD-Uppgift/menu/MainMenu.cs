@@ -6,8 +6,7 @@ namespace OOD_Uppgift.menu
 {
     public class MainMenu
     {
-        private static readonly Predicate<int> Invalidator = i => i is < 1 or > 6;
-
+        private static readonly Predicate<int> Invalidator = i => i is < 1 or > 7;
 
         public static void RunProgram()
         {
@@ -26,8 +25,9 @@ namespace OOD_Uppgift.menu
                     break;
             }
 
+            Console.Clear();
             Console.WriteLine("#--------------------------------------#");
-            Console.WriteLine("# Register loaded with data structure: #");
+            Console.WriteLine("# Registry loaded with data structure: #");
             Console.WriteLine(structureString);
             Console.WriteLine("#--------------------------------------#");
             Console.WriteLine("#   Please choose your options below   #");
@@ -37,7 +37,8 @@ namespace OOD_Uppgift.menu
             Console.WriteLine("# [3] - Remove an employee             #");
             Console.WriteLine("# [4] - Get an employee                #");
             Console.WriteLine("# [5] - Change data structure          #");
-            Console.WriteLine("# [6] - Exit                           #");
+            Console.WriteLine("# [6] - Run performance test           #");
+            Console.WriteLine("# [7] - Exit                           #");
             Console.WriteLine("#--------------------------------------#");
             
             Console.Write("Option: ");
@@ -45,7 +46,7 @@ namespace OOD_Uppgift.menu
 
             while (input == null || Invalidator(input.Value))
             {
-                Console.WriteLine("Invalid Input, Number should be between 1 and 6");
+                Console.WriteLine("Invalid Input, Number should be between 1 and 7");
                 Console.Write("Option: ");
                 input = Util.ReadLine<int>();
             }

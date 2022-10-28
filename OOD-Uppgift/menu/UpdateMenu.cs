@@ -1,5 +1,5 @@
-using OOD_Uppgift.employee;
 using System;
+using OOD_Uppgift.employee;
 
 namespace OOD_Uppgift.menu
 {
@@ -8,10 +8,10 @@ namespace OOD_Uppgift.menu
         public static void RunProgram()
         {
             Console.WriteLine("#-------------------------------------------------#");
-            Console.WriteLine("#   Add Employee                                  #");
+            Console.WriteLine("#                Update Employee                  #");
             Console.WriteLine("#-------------------------------------------------#");
-            Console.WriteLine("#   Type your SocialID                            #");
-            Console.Write("SocialID: ");
+            
+            Console.Write("Write your SocialID: ");
             string socialId = Util.ReadLine<string?>();
 
             Employee? employee = Program.registry.Get(socialId);
@@ -47,7 +47,7 @@ namespace OOD_Uppgift.menu
             {
                 case 1:
                     //socail ID
-                    Console.WriteLine("ScoailId: ");
+                    Console.WriteLine("SocialId: ");
                     string newsocialID = Util.ReadLine<string?>();
                     Program.registry.Remove(socialId);
                     Program.registry.Add(newsocialID, employee);

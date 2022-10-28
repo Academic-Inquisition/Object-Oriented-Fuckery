@@ -40,7 +40,7 @@ namespace OOD_Uppgift.register
             {
                 return  kvp.Value.Value;
             }
-            Console.WriteLine($"Error: Cannot get Employee with Social ID: {socialId}, because said employee doesn't exist!");
+            Console.WriteLine($"ERROR: Cannot get Employee with Social ID: {socialId}, because said employee doesn't exist!");
             return null;
         }
 
@@ -68,7 +68,7 @@ namespace OOD_Uppgift.register
             {
                 return this.Add(socialId, employee) ? employee : null;
             }
-            Console.WriteLine($"Error: Failed to Update Employee with Social ID: {socialId}");
+            Console.WriteLine($"ERROR: Failed to Update Employee with Social ID: {socialId}");
             return null;
         }
 
@@ -84,7 +84,7 @@ namespace OOD_Uppgift.register
                     updateFunction(employee);
                     return this.Add(socialId, employee) ? employee : null;
                 }
-                Console.WriteLine($"Error: Failed to Update Employee with Social ID: {socialId}");
+                Console.WriteLine($"ERROR: Failed to Update Employee with Social ID: {socialId}");
             }
             return null;
         }

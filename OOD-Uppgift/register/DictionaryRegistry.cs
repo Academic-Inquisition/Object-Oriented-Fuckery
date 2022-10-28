@@ -1,10 +1,10 @@
-﻿using Microsoft.Win32;
-using OOD_Uppgift.employee;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using System.Text;
+using Microsoft.Win32;
+using OOD_Uppgift.employee;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace OOD_Uppgift.register
 {
@@ -23,7 +23,7 @@ namespace OOD_Uppgift.register
         {
             if (_dictionary.ContainsKey(socialId))
             {
-                Console.WriteLine($"Error: Cannot add new Employee with Social ID: {socialId}, because said employee already exists!");
+                Console.WriteLine($"ERROR: Cannot add new Employee with Social ID: {socialId}, because said employee already exists!");
                 return false;
             }
             _dictionary.Add(socialId, employee);
@@ -34,7 +34,7 @@ namespace OOD_Uppgift.register
         {
             if (!_dictionary.ContainsKey(socialId))
             {
-                Console.WriteLine($"Error: Cannot get Employee with Social ID: {socialId}, because said employee doesn't exist!");
+                Console.WriteLine($"ERROR: Cannot get Employee with Social ID: {socialId}, because said employee doesn't exist!");
                 return null;
             }
             return _dictionary[socialId];
@@ -47,7 +47,7 @@ namespace OOD_Uppgift.register
                 _dictionary.Add(socialId, employee);
                 return employee;
             }
-            Console.WriteLine($"Error: Failed to Update Employee with Social ID: {socialId}");
+            Console.WriteLine($"ERROR: Failed to Update Employee with Social ID: {socialId}");
             return null;
         }
 
@@ -61,7 +61,7 @@ namespace OOD_Uppgift.register
                     updateFunction(employee);
                     return Add(socialId, employee) ? employee : null;
                 }
-                Console.WriteLine($"Error: Failed to Update Employee with Social ID: {socialId}");
+                Console.WriteLine($"ERROR: Failed to Update Employee with Social ID: {socialId}");
             }
             return null;  
         }
@@ -78,7 +78,6 @@ namespace OOD_Uppgift.register
 
         public static DictionaryRegistry GetRegistry()
         {
-
             if (registry == null)
             {
                 registry = new DictionaryRegistry();

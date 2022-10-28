@@ -1,5 +1,5 @@
-using OOD_Uppgift.register;
 using System;
+using OOD_Uppgift.register;
 
 namespace OOD_Uppgift.menu
 {
@@ -31,7 +31,7 @@ namespace OOD_Uppgift.menu
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   [1] Dictionary                                #");
             Console.WriteLine("#   [2] Linked List                               #");
-            Console.WriteLine("#   [3] Return                                    #");
+            Console.WriteLine("#   [3] Exit                                      #");
             Console.WriteLine("#-------------------------------------------------#");
 
             Console.Write("Option: ");

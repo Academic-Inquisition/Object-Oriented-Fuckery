@@ -18,6 +18,7 @@ namespace OOD_Uppgift.employee
             workertype = wt;
             Guid ID = new Guid();
         }
+        
         public void addEquipment(IEquipment equipment)
         {
             if (equipments.ContainsKey(equipment))

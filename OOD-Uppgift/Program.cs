@@ -41,7 +41,10 @@ namespace OOD_Uppgift
                         RegistryMenu.RunProgram();
                         break;
                     case 6:
-                        Console.WriteLine("Press any key to close this window");
+                        PerfTestMenu.RunProgram();
+                        break;
+                    case 7:
+                        Console.WriteLine("Press any key to close this window...");
                         Console.ReadKey();
                         Environment.Exit(0);
                         break;

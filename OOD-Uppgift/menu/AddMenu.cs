@@ -1,5 +1,5 @@
-using OOD_Uppgift.employee;
 using System;
+using OOD_Uppgift.employee;
 
 namespace OOD_Uppgift.menu
 {
@@ -10,24 +10,24 @@ namespace OOD_Uppgift.menu
         public static void RunProgram()
         {
             Console.WriteLine("#-------------------------------------------------#");
-            Console.WriteLine("#   Add Employee                                  #");
+            Console.WriteLine("#                 Add Employee                    #");
             Console.WriteLine("#-------------------------------------------------#");
-            Console.WriteLine("#   Type your SocialID                            #");
-            Console.Write("SocialID: ");
+            
+            Console.Write("Enter SocialID: ");
             string socialId = Util.ReadLine<string?>();
-            Console.WriteLine("#   Type in your Name                             #");
-            Console.Write("Name: ");
+
+            Console.Write("Enter name: ");
             string name = Util.ReadLine<string?>();
 
             var workertypes = WorkerTypeHandler.getTypes();
 
-            Console.WriteLine("#   Choose your workertype                        #");
+            Console.WriteLine("\n#-------------Choose your workertype--------------#");
             foreach (var workertype in workertypes)
             {
                 Console.WriteLine($"[{workertype.Key}] {workertype.Value}");
             }
 
-            Console.Write("WorkerType: ");
+            Console.Write("\nWorkerType: ");
             var emp_workertype_input = Util.ReadLine<int?>();
 
             while (emp_workertype_input == null || !workertypes.ContainsKey((int)emp_workertype_input))
