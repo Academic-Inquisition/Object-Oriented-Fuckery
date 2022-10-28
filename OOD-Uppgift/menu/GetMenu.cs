@@ -1,6 +1,6 @@
+using System;
 using OOD_Uppgift.employee;
 using OOD_Uppgift.register;
-using System;
 
 namespace OOD_Uppgift.menu
 {

@@ -1,7 +1,7 @@
-﻿using Microsoft.Win32;
-using OOD_Uppgift.register;
-using System;
+﻿using System;
+using Microsoft.Win32;
 using System.Collections;
+using OOD_Uppgift.register;
 using System.Collections.Generic;
 
 namespace OOD_Uppgift.menu
