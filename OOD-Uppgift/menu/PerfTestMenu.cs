@@ -7,7 +7,6 @@ namespace OOD_Uppgift.menu
     public class PerfTestMenu
     {
         static bool bothTested;
-        public static string? testStructure;
         static Stopwatch stopwatch = new();
         static BaseRegistry? testRegistry;
         private static readonly Predicate<int> Invalidator = i => i is < 1 or > 3;
@@ -30,20 +29,19 @@ namespace OOD_Uppgift.menu
             {
                 Console.WriteLine("Invalid Input, Number should be between 1 and 3");
                 Console.Write("Option: ");
-                input = Util.ReadLine<int>();
+                input = Util.ReadLine<int?>();
             }
 
             switch(input)
             {
                 case 1:
-                    testRegistry = new DictionaryRegistry();
-                    testStructure = "Dictionary";
+                    testRegistry = DictionaryRegistry.GetRegistry();
                     Console.Clear();
                     PerfTest(testRegistry);
+                    
                     break;
                 case 2:
-                    testRegistry = new LinkedRegistry();
-                    testStructure = "Linked List";
+                    testRegistry = LinkedRegistry.GetRegistry();
                     Console.Clear();
                     PerfTest(testRegistry);
                     break;
@@ -54,9 +52,9 @@ namespace OOD_Uppgift.menu
             Program.ResetProgram();
         }
 
-        internal static void PerfTest(BaseRegistry? registry)
+        internal static void PerfTest(BaseRegistry registry)
         {
-            Console.WriteLine($"Using data structure '{testStructure}'");
+            Console.WriteLine($"Using data structure '{registry.GetType().Name}'");
             Console.WriteLine($"\nRunning test #1: 'Add employees'");
             stopwatch.Start();
             Performance.AddTest(registry);
@@ -86,7 +84,7 @@ namespace OOD_Uppgift.menu
 
             if (bothTested == false)
             {
-                Console.WriteLine($"You have tested the following data structure: '{testStructure}'");
+                Console.WriteLine($"You have tested the following data structure: '{registry.GetType().Name}'");
                 Console.WriteLine("Do you want to test the other structure as well? (Y/N)");
                 var input = Util.ReadLine<string?>();
 
@@ -96,20 +94,21 @@ namespace OOD_Uppgift.menu
                 {   
                     bothTested = true;
 
-                    if (testStructure == "Dictionary")
+                    if (registry is DictionaryRegistry)
                     {
-                        testRegistry = new LinkedRegistry();
-                        testStructure = "Linked List";
+                        testRegistry = LinkedRegistry.GetRegistry();
                         PerfTest(testRegistry);
+                        testRegistry.RemoveAll();
                     }
                     else 
                     {
-                        testRegistry = new DictionaryRegistry();
-                        testStructure = "Dictionary";
+                        testRegistry = DictionaryRegistry.GetRegistry();
                         PerfTest(testRegistry);
+                        testRegistry.RemoveAll();
                     }
                 }
             }
+            
             
             Console.Write("Press any key to return to main menu...");
             Console.ReadKey();

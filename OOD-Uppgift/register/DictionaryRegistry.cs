@@ -14,7 +14,7 @@ namespace OOD_Uppgift.register
 
         private Dictionary<string, Employee> _dictionary;
 
-        public DictionaryRegistry()
+        private DictionaryRegistry()
         {
             _dictionary = new Dictionary<string, Employee>();
         }
@@ -78,11 +78,8 @@ namespace OOD_Uppgift.register
 
         public static DictionaryRegistry GetRegistry()
         {
-            if (registry == null)
-            {
-                registry = new DictionaryRegistry();
-                return registry;
-            }
+            if (registry is not null) return registry;
+            registry = new DictionaryRegistry();
             return registry;
         }
     }

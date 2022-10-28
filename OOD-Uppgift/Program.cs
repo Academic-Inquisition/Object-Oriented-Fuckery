@@ -8,7 +8,7 @@ namespace OOD_Uppgift
     {
         public static int ActiveProgram = -1;
 
-        internal static BaseRegistry registry = new DictionaryRegistry();
+        internal static BaseRegistry registry = DictionaryRegistry.GetRegistry();
 
         public static void Main(string[] args)
         {
@@ -39,10 +39,7 @@ namespace OOD_Uppgift
                         RegistryMenu.RunProgram();
                         break;
                     case 6:
-                        PerfTestMenu.RunProgram();
-                        break;
-                    case 7:
-                        Console.WriteLine("Press any key to close this window...");
+                        Console.WriteLine("Press any key to close this window");
                         Console.ReadKey();
                         Environment.Exit(0);
                         break;

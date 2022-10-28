@@ -14,7 +14,7 @@ namespace OOD_Uppgift.register
 
         private SortedList<string, Employee> _sortedlist;
 
-        public SortedListRegistry()
+        private SortedListRegistry()
         {
             _sortedlist = new SortedList<string, Employee>();
         }
@@ -79,11 +79,8 @@ namespace OOD_Uppgift.register
 
         public static SortedListRegistry GetRegistry()
         {
-            if (registry == null)
-            {
-                registry = new SortedListRegistry();
-                return registry;
-            }
+            if (registry is not null) return registry;
+            registry = new SortedListRegistry();
             return registry;
         }
     }

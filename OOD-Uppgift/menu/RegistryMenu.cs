@@ -1,5 +1,5 @@
-using System;
 using OOD_Uppgift.register;
+using System;
 
 namespace OOD_Uppgift.menu
 {
@@ -14,18 +14,18 @@ namespace OOD_Uppgift.menu
             Console.WriteLine("#   Change Registry Type                          #");
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   Current Registry Type                         #");
-            if (Program.registry.GetType() == typeof(DictionaryRegistry))
+            if (Program.registry is DictionaryRegistry)
             {
                 Console.WriteLine("#              Dictionary              #");
             }
-            else if (Program.registry.GetType() == typeof(LinkedRegistry))
+            else if (Program.registry is LinkedRegistry)
             {
                 Console.WriteLine("#             Linked List              #");
             }
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   [1] Dictionary                                #");
             Console.WriteLine("#   [2] Linked List                               #");
-            Console.WriteLine("#   [3] Exit                                      #");
+            Console.WriteLine("#   [3] Return                                    #");
             Console.WriteLine("#-------------------------------------------------#");
 
             Console.Write("Option: ");
@@ -35,21 +35,21 @@ namespace OOD_Uppgift.menu
             {
                 Console.WriteLine("Invalid Input, Number should be between 1 and 3");
                 Console.Write("Option: ");
-                input = Util.ReadLine<int>();
+                input = Util.ReadLine<int?>();
             }
 
             switch(input)
             {
                 case 1:
-                    if (Program.registry.GetType() != typeof(DictionaryRegistry))
+                    if (Program.registry is not DictionaryRegistry)
                     {
-                        Program.registry = new DictionaryRegistry();
+                        Program.registry = DictionaryRegistry.GetRegistry();
                     }
                     break;
                 case 2:
-                    if (Program.registry.GetType() != typeof(LinkedRegistry))
+                    if (Program.registry is not LinkedRegistry)
                     {
-                        Program.registry = new LinkedRegistry();
+                        Program.registry = LinkedRegistry.GetRegistry();
                     }
                     break;
             }
