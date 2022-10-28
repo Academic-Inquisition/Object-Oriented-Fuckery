@@ -10,24 +10,18 @@ namespace OOD_Uppgift.menu
         public static void RunProgram()
         {
 
-            string structureString;
-            switch (Program.dataStructure)
-            {
-                case "Dictionary":
-                    structureString = "#              Dictionary              #";
-                    break;
-                case "Linked List":
-                    structureString = "#             Linked List              #";
-                    break;
-                default:
-                    structureString = "#     No data structure initialized    #";
-                    break;
-            }
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   Change Registry Type                          #");
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   Current Registry Type                         #");
-            Console.WriteLine(structureString);
+            if (Program.registry.GetType() == typeof(DictionaryRegistry))
+            {
+                Console.WriteLine("#              Dictionary              #");
+            }
+            else if (Program.registry.GetType() == typeof(LinkedRegistry))
+            {
+                Console.WriteLine("#             Linked List              #");
+            }
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   [1] Dictionary                                #");
             Console.WriteLine("#   [2] Linked List                               #");
@@ -47,30 +41,20 @@ namespace OOD_Uppgift.menu
             switch(input)
             {
                 case 1:
-                    if (Program.dataStructure != "Dictionary")
+                    if (Program.registry.GetType() != typeof(DictionaryRegistry))
                     {
                         Program.registry = new DictionaryRegistry();
-                        Program.dataStructure = "Dictionary";
                     }
                     break;
                 case 2:
-                    if (Program.dataStructure != "Linked List")
+                    if (Program.registry.GetType() != typeof(LinkedRegistry))
                     {
                         Program.registry = new LinkedRegistry();
-                        Program.dataStructure = "Linked List";
                     }
-                    break;
-                default:
-
                     break;
             }
 
             Program.ResetProgram();
         }
-
-        //private void MigrateNOTDatabase(string input)
-        //{
-
-        //}
     }
 }

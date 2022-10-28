@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using OOD_Uppgift.register;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -11,24 +13,16 @@ namespace OOD_Uppgift.menu
 
         public static void RunProgram()
         {
-            string structureString;
-            
-            switch (Program.dataStructure)
-            {
-                case "Dictionary":
-                    structureString = "#              Dictionary              #";
-                    break;
-                case "Linked List":
-                    structureString = "#             Linked List              #";
-                    break;
-                default:
-                    structureString = "#     No data structure initialized    #";
-                    break;
-            }
-
             Console.WriteLine("#--------------------------------------#");
             Console.WriteLine("# Register loaded with data structure: #");
-            Console.WriteLine(structureString);
+            if(Program.registry.GetType() == typeof(DictionaryRegistry))
+            {
+                Console.WriteLine("#              Dictionary              #");
+            }
+            else if (Program.registry.GetType() == typeof(LinkedRegistry))
+            {
+                Console.WriteLine("#             Linked List              #");
+            }
             Console.WriteLine("#--------------------------------------#");
             Console.WriteLine("#   Please choose your options below   #");
             Console.WriteLine("#--------------------------------------#");
