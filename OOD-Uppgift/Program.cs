@@ -10,8 +10,6 @@ namespace OOD_Uppgift
 
         internal static BaseRegistry registry = new DictionaryRegistry();
 
-        public static string? dataStructure = "Dictionary";
-
         public static void Main(string[] args)
         {
             while (!Environment.HasShutdownStarted)
