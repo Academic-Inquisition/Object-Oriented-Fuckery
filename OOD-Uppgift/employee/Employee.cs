@@ -8,6 +8,7 @@ namespace OOD_Uppgift.employee
 {
     internal class Employee
     {
+        //Guid not optimal
         public string name;
         public WorkerType workertype;
         public Guid ID;
