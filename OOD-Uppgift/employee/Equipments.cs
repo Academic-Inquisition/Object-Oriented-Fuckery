@@ -8,23 +8,21 @@ namespace OOD_Uppgift.employee
 {
     public class Equipments
     {
-        private static Equipments? equipments;
+        private static List<IEquipment> Items = new();
 
-        public List<IEquipment> items = new List<IEquipment>();
+        // Attire
+        public static IEquipment PLIERS = Register(new Tool("Pliers", "Pulls Nails"));
+        public static IEquipment HAMMER = Register(new Tool("Hammer", "Hammers Planks"));
+        public static IEquipment SAW = Register(new Tool("Saw", "Saws Wood"));
+        
+        // Attire
+        public static IEquipment HARD_HAT = Register(new Attire("Hard Hat", "Protects Yer Nogging"));
+        public static IEquipment WORK_PANTS = Register(new Attire("Work Pants", "Protection For Yer Tuchy"));
 
-        private Equipments()
+        public static IEquipment Register(IEquipment equipment)
         {
-            items.Add(new Tool("Pliers", "Pulls Nails"));
-            items.Add(new Tool("Hammer", "Hammers Planks"));
-            items.Add(new Attire("Hard Hat", "Protects Yer Nogging"));
-            items.Add(new Attire("Work Pants", "Protection For Yer Tuchy"));
-        }
-
-        public static Equipments GetEquipments()
-        {
-            if (equipments == null)
-                equipments = new Equipments();
-            return equipments;
+            Items.Add(equipment);
+            return equipment;
         }
 
     }
