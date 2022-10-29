@@ -6,22 +6,25 @@ using System.Threading.Tasks;
 
 namespace OOD_Uppgift.employee
 {
-    public static class Equipments
+    public class Equipments
     {
-    public static List<IEquipment> items = new List<IEquipment>();
+        private static Equipments? _equipments;
 
-    public static void init()
-        {
-        register(new Tool("Hammer", "Hammers Planks"));
-        register(new Tool("Pliers", "Pulls Nails"));
-        register(new Attire("Hard Hat", "Protects Yer Nogging"));
-        register(new Attire("Work Pants", "Protection For Yer Tuchy"));
+        public List<IEquipment> items = new List<IEquipment>();
 
-    }
-    public static IEquipment register(IEquipment equipment)
+        private Equipments()
         {
-            items.Add(equipment);
-            return equipment;
+            items.Add(new Tool("Pliers", "Pulls Nails"));
+            items.Add(new Tool("Hammer", "Hammers Planks"));
+            items.Add(new Attire("Hard Hat", "Protects Yer Nogging"));
+            items.Add(new Attire("Work Pants", "Protection For Yer Tuchy"));
+        }
+
+        public static Equipments GetEquipments()
+        {
+            if (_equipments == null)
+                _equipments = new Equipments();
+            return _equipments;
         }
 
     }

@@ -57,28 +57,28 @@ namespace OOD_Uppgift.menu
             stopwatch.Start();
             Performance.AddTest(registry);
             stopwatch.Stop();
-            Console.WriteLine($"Test completed! Employees added: 50000, Time elapsed: {stopwatch.Elapsed}");
+            Console.WriteLine($"Test completed! Employees added: {Performance.span}, Time elapsed: {stopwatch.Elapsed}");
 
             stopwatch = new();
             Console.WriteLine("\nRunning test #2: 'Update employees'");
             stopwatch.Start();
             Performance.UpdateTest(registry);
             stopwatch.Stop();
-            Console.WriteLine($"Test completed! Employees updated: 50000, Time elapsed: {stopwatch.Elapsed}");
+            Console.WriteLine($"Test completed! Employees updated: {Performance.span}, Time elapsed: {stopwatch.Elapsed}");
 
             stopwatch = new();
             Console.WriteLine("\nRunning test #3: 'Read employee data'");
             stopwatch.Start();
             Performance.ReadTest(registry);
             stopwatch.Stop();
-            Console.WriteLine($"Test completed! Employee entries read: 50000, Time elapsed: {stopwatch.Elapsed}");
+            Console.WriteLine($"Test completed! Employee entries read: {Performance.span}, Time elapsed: {stopwatch.Elapsed}");
 
             stopwatch = new();
             Console.WriteLine("\nRunning test #4: 'Remove employees'");
             stopwatch.Start();
             Performance.RemoveTest(registry);
             stopwatch.Stop();
-            Console.WriteLine($"Test completed! Employees removed: 50000, Time elapsed: {stopwatch.Elapsed}\n");
+            Console.WriteLine($"Test completed! Employees removed: {Performance.span}, Time elapsed: {stopwatch.Elapsed}\n");
 
             if (bothTested == false)
             {
@@ -88,7 +88,7 @@ namespace OOD_Uppgift.menu
 
                 Console.WriteLine();
 
-                if (input.ToUpper() == "Y" || input == "y")
+                if (input.ToUpper() == "Y")
                 {   
                     bothTested = true;
 
