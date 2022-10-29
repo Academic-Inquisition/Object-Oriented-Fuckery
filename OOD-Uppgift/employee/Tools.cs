@@ -8,8 +8,8 @@ namespace OOD_Uppgift.employee
 {
     public class Tool : IEquipment
     {
-        public string name;
-        public string workDesc;
+        private string name;
+        private string workDesc;
 
         public Tool(String toolName, String desc)
         {

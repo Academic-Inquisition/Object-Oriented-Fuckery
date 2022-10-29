@@ -8,8 +8,8 @@ namespace OOD_Uppgift.employee
 {
     public class Attire : IEquipment
     {
-        public string name;
-        public string workDesc;
+        private string name;
+        private string workDesc;
 
   public Attire(String attireName, String desc)
         {

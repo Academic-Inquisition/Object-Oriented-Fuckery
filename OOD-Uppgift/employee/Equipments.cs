@@ -8,7 +8,7 @@ namespace OOD_Uppgift.employee
 {
     public class Equipments
     {
-        private static Equipments? _equipments;
+        private static Equipments? equipments;
 
         public List<IEquipment> items = new List<IEquipment>();
 
@@ -22,9 +22,9 @@ namespace OOD_Uppgift.employee
 
         public static Equipments GetEquipments()
         {
-            if (_equipments == null)
-                _equipments = new Equipments();
-            return _equipments;
+            if (equipments == null)
+                equipments = new Equipments();
+            return equipments;
         }
 
     }
