@@ -5,8 +5,6 @@ namespace OOD_Uppgift.menu
 {
     public class AddMenu
     {
-        //private static readonly Predicate<int> Invalidator = i => i is < 1 or > 4;
-
         public static void RunProgram()
         {
             Console.WriteLine("#-------------------------------------------------#");
@@ -14,10 +12,10 @@ namespace OOD_Uppgift.menu
             Console.WriteLine("#-------------------------------------------------#");
             
             Console.Write("Enter SocialID: ");
-            string socialId = Util.ReadLine<string?>();
+            string socialId = Util.ReadLine<string>();
 
             Console.Write("Enter name: ");
-            string name = Util.ReadLine<string?>();
+            string name = Util.ReadLine<string>();
 
             var workertypes = WorkerTypeHandler.getTypes();
 

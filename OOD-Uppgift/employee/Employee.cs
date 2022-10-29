@@ -16,7 +16,7 @@ namespace OOD_Uppgift.employee
         public Employee(string employeeName, WorkerType wt) {
             name = employeeName;
             workertype = wt;
-            ID= Guid.NewGuid();
+            ID = Guid.NewGuid();
         }
         
         public void addEquipment(IEquipment equipment)
