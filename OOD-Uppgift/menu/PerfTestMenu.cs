@@ -20,7 +20,7 @@ namespace OOD_Uppgift.menu
             Console.WriteLine("#--------------------------------------#");
             Console.WriteLine("# [1] - Dictionary                     #");
             Console.WriteLine("# [2] - Linked List                    #");
-            Console.WriteLine("# [3] - Exit                           #");
+            Console.WriteLine("# [3] - Return                         #");
             Console.WriteLine("#--------------------------------------#");
             Console.Write("Option: ");
             var input = Util.ReadLine<int?>();

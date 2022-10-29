@@ -22,13 +22,13 @@ namespace OOD_Uppgift.menu
                 return;
             }
 
-            Console.WriteLine("#--------------------------------------#");
+            Console.WriteLine("\n#--------------------------------------#");
             Console.WriteLine("#   Please choose your options below   #");
             Console.WriteLine("#--------------------------------------#");
             Console.WriteLine("# [1] - Update SocialID                #");
             Console.WriteLine("# [2] - Update Name                    #");
             Console.WriteLine("# [3] - Update WorkerType              #");
-            Console.WriteLine("# [4] - Cancel                         #");
+            Console.WriteLine("# [4] - Return                         #");
             Console.WriteLine("#--------------------------------------#");
 
             Console.Write("Option: ");

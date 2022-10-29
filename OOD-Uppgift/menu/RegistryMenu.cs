@@ -11,16 +11,17 @@ namespace OOD_Uppgift.menu
         {
 
             Console.WriteLine("#-------------------------------------------------#");
-            Console.WriteLine("#   Change Registry Type                          #");
+            Console.WriteLine("#             Change Registry Type                #");
             Console.WriteLine("#-------------------------------------------------#");
-            Console.WriteLine("#   Current Registry Type                         #");
+            Console.WriteLine("#            Current Registry Type:               #");
+            
             if (Program.registry is DictionaryRegistry)
             {
-                Console.WriteLine("#              Dictionary              #");
+                Console.WriteLine("#                  Dictionary                     #");
             }
             else if (Program.registry is LinkedRegistry)
             {
-                Console.WriteLine("#             Linked List              #");
+                Console.WriteLine("#                  Linked List                    #");
             }
             Console.WriteLine("#-------------------------------------------------#");
             Console.WriteLine("#   [1] Dictionary                                #");
