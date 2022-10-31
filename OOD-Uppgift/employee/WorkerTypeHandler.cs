@@ -8,8 +8,8 @@ namespace OOD_Uppgift.employee
         Bumblebee = 2,
         Giraff = 3
     }
-    public static class WorkerTypeHandler
 
+    public static class WorkerTypeHandler
     {
         public static Dictionary<int, string> getTypes()
         {
